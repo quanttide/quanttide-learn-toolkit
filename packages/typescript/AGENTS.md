@@ -10,6 +10,11 @@
 
 - 契约测试在 `tests/contract.test.ts`，引用根 `tests/` 的共享标本；变更契约后 `npm test` 必须全绿。
 
+## 发布（npm）
+
+- **触发**：GitHub Release 发布时由 `.github/workflows/publish-typescript.yml` 自动发布到 npm（tag 前缀 `typescript/`）；tag 版本必须与 package.json 版本一致（workflow 会校验，不一致则失败）。
+- **流程**：bump package.json 版本 + 本包 CHANGELOG 新版本段 → 提交推送 → `git tag typescript/vX.Y.Z` → `gh release create typescript/vX.Y.Z` → workflow 跑测试、构建后 `npm publish`。
+
 ## 提交规范
 
 遵循 Conventional Commits（`feat:` / `fix:` / `docs:` / `chore:` 等）；破坏性变更标 `!` 并在 body 说明迁移方式。
