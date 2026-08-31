@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Completion",
+  "description": "Learner 沿 Schedule 完成 Task 的通过记录。",
+  "properties": {
+    "id":         {"type": "string", "description": "主键（uuid）"},
+    "learner_id": {"type": "string", "description": "→ Learner.id"},
+    "task_id":    {"type": "string", "description": "→ Task.id"},
+    "status":     {"type": "string", "enum": ["completed", "not_completed"], "description": "二元枚举"},
+    "created_at": {"type": "string", "description": "创建时间（ISO 8601）"},
+    "updated_at": {"type": "string", "description": "更新时间（ISO 8601）"}
+  },
+  "required": ["id", "learner_id", "task_id", "status"]
+}

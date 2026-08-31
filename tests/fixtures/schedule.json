@@ -1,0 +1,17 @@
+{
+  "id": "schedule-agent-engineer",
+  "title": "智能体工程师训练营",
+  "description": "按学习路径推进的训练计划，主线是建设数据工程第二大脑。",
+  "tasks": [
+    {
+      "id": "task-data-second-brain",
+      "title": "熟悉数据工程第二大脑",
+      "description": "以新人视角通读领域第二大脑，记录困惑并提出改进建议。达成：至少一条建议经 Issue 讨论达成共识后进入 PR。"
+    },
+    {
+      "id": "task-data-intention",
+      "title": "整理数据工程意图",
+      "description": "从数据工程日志考古组织意图，增加最新想法，描绘量潮为什么想要建设数据工程第二大脑。"
+    }
+  ]
+}

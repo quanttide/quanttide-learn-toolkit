@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Schedule",
+  "description": "学习管理体系的核心领域模型——Task 的有序集合，探路者—跟随者结构的枢纽。",
+  "properties": {
+    "id":          {"type": "string", "description": "唯一标识"},
+    "title":       {"type": "string", "description": "名称"},
+    "description": {"type": "string", "description": "可选，描述"},
+    "tasks": {
+      "type": "array",
+      "description": "Task 有序数组，不引入额外层级实体",
+      "items": {"$ref": "task.json"}
+    }
+  },
+  "required": ["id", "title", "tasks"]
+}

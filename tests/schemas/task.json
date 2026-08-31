@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Task",
+  "description": "路径上的一个节点——「学什么、做什么、做到什么程度算过」的最小单位，自足、自描述。",
+  "properties": {
+    "id":          {"type": "string", "description": "唯一标识"},
+    "title":       {"type": "string", "description": "标题"},
+    "description": {"type": "string", "description": "验收判定写进描述（做到什么程度算过），不引用外部概念"}
+  },
+  "required": ["id", "title", "description"]
+}

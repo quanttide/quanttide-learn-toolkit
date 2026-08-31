@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Learner",
+  "description": "学习管理领域的学习者主体。",
+  "properties": {
+    "id":          {"type": "string", "description": "本领域学习者 ID（uuid）"},
+    "user_id":     {"type": "string", "description": "可选，预留，关联 auth 领域用户 ID（uuid）"},
+    "schedule_id": {"type": "string", "description": "可选，→ Schedule.id，跟随的学习路径"}
+  },
+  "required": ["id"]
+}
