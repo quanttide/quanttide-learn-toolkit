@@ -1,0 +1,13 @@
+[package]
+name = "quanttide-learn"
+version = "0.1.0"
+edition = "2021"
+description = "QuantTide learning management domain models"
+license = "Apache-2.0"
+repository = "https://github.com/quanttide/quanttide-learn-toolkit"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+serde_json = "1"

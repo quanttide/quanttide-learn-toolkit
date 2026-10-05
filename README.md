@@ -6,6 +6,8 @@
 
 - `packages/`：语言实现包
   - [`packages/typescript/`](packages/typescript/)：TypeScript SDK（Learner × Completion + Schedule + Task 领域模型）
+  - [`packages/go/`](packages/go/)：Go 模型包（JSON 契约同源）
+  - [`packages/rust/`](packages/rust/)：Rust 模型 crate（JSON 契约同源）
 - `tests/`：契约测试——跨语言单一事实源（JSON Schema + Fixture），由 [docs/specification](https://github.com/quanttide/quanttide-specification-of-learning-management) 推导
 
 ## 领域模型
@@ -25,4 +27,10 @@ Learner ──1:N──▶ Completion ◀──N:1── Task（Task 属于 Sche
 cd packages/typescript
 npm install
 npm test
+
+cd ../go
+go test ./...
+
+cd ../rust
+cargo test
 ```

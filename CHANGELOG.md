@@ -5,5 +5,8 @@
 ### Added
 
 - 初始化 `packages/typescript`：TypeScript SDK，实现 Learner × Completion（标准实体）与 Schedule + Task（核心领域模型）
+- 初始化 `packages/go`：Go 模型包，字段与根 JSON 契约保持一致
+- 初始化 `packages/rust`：Rust 模型 crate，字段与根 JSON 契约保持一致
 - 建立根 `tests/` 契约测试体系（JSON Schema + Fixture，引用 docs/specification）
+- 三语言契约测试复用同一组 fixtures，验证反序列化与 round-trip 一致性
 - GitHub Actions 流水线：`ci-typescript.yml`（push/PR 校验）+ `publish-typescript.yml`（Release 触发，tag 前缀 `typescript/`，发布到 npm）
